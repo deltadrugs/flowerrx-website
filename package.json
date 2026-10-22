@@ -1,0 +1,28 @@
+{
+  "name": "flowerrx-website",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Public website for Flower Rx Pharmacy in Glendale, California.",
+  "scripts": {
+    "dev": "next dev",
+    "prebuild": "node scripts/check-photos.mjs",
+    "build": "next build && node scripts/relativize-export.mjs",
+    "photos:webp": "node scripts/photos-webp.mjs",
+    "test": "node --experimental-strip-types --disable-warning=MODULE_TYPELESS_PACKAGE_JSON --test lib/hours.test.ts",
+    "preview": "npx --yes serve out -l 4173"
+  },
+  "dependencies": {
+    "next": "^15.5.4",
+    "react": "^19.1.1",
+    "react-dom": "^19.1.1"
+  },
+  "devDependencies": {
+    "@tailwindcss/postcss": "^4.1.13",
+    "@types/node": "^22.18.6",
+    "@types/react": "^19.1.13",
+    "@types/react-dom": "^19.1.9",
+    "sharp": "^0.34.4",
+    "tailwindcss": "^4.1.13",
+    "typescript": "^5.9.2"
+  }
+}
