@@ -3,7 +3,7 @@ import localFont from "next/font/local";
 import { BaseHrefLock } from "@/components/BaseHrefLock";
 import { Footer } from "@/components/Footer";
 import { Header } from "@/components/Header";
-import { HERO_DESKTOP_MEDIA, photoUrl, photos } from "@/lib/photos";
+import { photoUrl, photos } from "@/lib/photos";
 import { baseTagScript } from "@/lib/deploy";
 import { seo } from "@/lib/seo";
 import { site } from "@/lib/site";
@@ -87,14 +87,6 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           as="image"
           href={photoUrl(photos.heroStorefrontWide, "webp")}
           type="image/webp"
-          media={HERO_DESKTOP_MEDIA}
-        />
-        <link
-          rel="preload"
-          as="image"
-          href={photoUrl(photos.entranceFrontDoors, "webp")}
-          type="image/webp"
-          media="(max-width: 799px)"
         />
       </head>
       <body>

@@ -22,7 +22,7 @@ The export is written to `out/`.
 
 ## Photographs
 
-All photographs live in [`public/photos/`](public/photos/). Every placement is declared in [`lib/photos.ts`](lib/photos.ts). Nothing else should name a photo file.
+All photographs live in [`public/photos/`](public/photos/). Every slot is declared in [`lib/photos.ts`](lib/photos.ts). Nothing else should name a photo file. The page shows three of them, as small duotone glimpses: the storefront plate, brick, and a wood beam. The rest stay in the folder so a later file can be swapped in without a redesign.
 
 To swap a picture for a retouched file:
 
@@ -32,7 +32,7 @@ To swap a picture for a retouched file:
 
 To point a slot at a different basename, change its `file` line.
 
-Do not bake text or color overlays into the files. The hero shade, wordmark, and type are HTML and CSS. The Open Graph image is the hero JPEG itself.
+Do not bake text, duotone, or frames into the files. Crops, the burgundy-and-charcoal tint, and the arched frames are CSS. The Open Graph image is the raw hero JPEG.
 
 The logo used on the page is `public/brand/logo-horizontal.svg`.
 

@@ -1,5 +1,4 @@
 import { About } from "@/components/About";
-import { Gallery } from "@/components/Gallery";
 import { Hero } from "@/components/Hero";
 import { JsonLd } from "@/components/JsonLd";
 import { Services } from "@/components/Services";
@@ -14,7 +13,6 @@ export default function HomePage() {
       <Services />
       <About />
       <Transfer />
-      <Gallery />
       <Visit />
     </>
   );

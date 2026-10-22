@@ -1,11 +1,12 @@
-import { Frame } from "@/components/Photo";
-import { photos } from "@/lib/photos";
+import { SprigDrawing } from "@/components/engravings";
 import { site } from "@/lib/site";
 
 export default function NotFound() {
   return (
     <div className="wrap missing">
-      <Frame className="missing-photo" photo={photos.exteriorBuilding} />
+      <div className="missing-sprig">
+        <SprigDrawing />
+      </div>
       <p className="eyebrow">404</p>
       <h1>We can’t find that page.</h1>
       <p className="intro">

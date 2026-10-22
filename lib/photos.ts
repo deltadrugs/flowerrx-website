@@ -11,11 +11,13 @@
  *
  * One-line swap: change the `file` basename on the slot.
  *
- * Do not bake type or color overlays into the files. The hero shade, logo,
- * and text are HTML and CSS.
+ * Do not bake type or color overlays into the files. Duotone, crops, and
+ * frames are CSS. The wordmark and the line drawings are separate files.
  *
- * Hero breakpoint is 800px (`HERO_DESKTOP_MEDIA`). The same cutoff is in
- * `app/globals.css` (`.hero` min-width: 800px). Keep them together.
+ * The page shows three photographs: the storefront plate, a brick glimpse,
+ * and a beam glimpse. The other slots stay here so a later swap can point
+ * one of those three at a new basename, or a design can bring a file back,
+ * without hunting through components.
  */
 
 export const HERO_DESKTOP_MIN_PX = 800;
@@ -45,9 +47,9 @@ export const photos = {
     width: 2000,
     height: 1500,
     aspect: "4:3",
-    appears: ["Hero on screens 800px and wider", "Gallery", "Open Graph image"],
+    appears: ["Hero plate, duotone, arched crop", "Open Graph image"],
     frame:
-      "Full-bleed first screen, CSS object-fit: cover, anchored near the top center so the carved sign and doors stay in frame. Wide monitors crop the sides; shorter laptop screens crop the bottom sidewalk. A cream panel covers the lower part of the screen, so keep the sign and entrance in the upper-middle.",
+      "Arched apothecary frame, CSS object-fit: cover, object-position center 36%. The crop favors the canopy, oval sign, and steel doors. A line drawing inks over it, then this photograph fades in. Duotone is CSS, not baked in.",
   },
   entranceFrontDoors: {
     file: "entrance-front-doors",
@@ -55,9 +57,8 @@ export const photos = {
     width: 1125,
     height: 2000,
     aspect: "9:16",
-    appears: ["Hero on screens under 800px", "Gallery"],
-    frame:
-      "Full-bleed first screen on phones, CSS object-fit: cover, anchored slightly above center. Keep the doors and sign in the middle. The cream panel covers the lower portion of the screen.",
+    appears: ["Kept for a later swap. Not shown."],
+    frame: "Not on the page. Portrait 9:16 of the front doors.",
   },
   heroStorefrontSign: {
     file: "hero-storefront-sign",
@@ -65,8 +66,8 @@ export const photos = {
     width: 2000,
     height: 1500,
     aspect: "4:3",
-    appears: ["Visit", "Gallery"],
-    frame: "Shown at 4:3, not cropped.",
+    appears: ["Kept for a later swap. Not shown."],
+    frame: "Not on the page. 4:3 of the carved sign.",
   },
   exteriorBuilding: {
     file: "exterior-building",
@@ -74,8 +75,9 @@ export const photos = {
     width: 2000,
     height: 1500,
     aspect: "4:3",
-    appears: ["404 page", "Gallery"],
-    frame: "Shown at 4:3, not cropped.",
+    appears: ["Our space, oval glimpse of brick"],
+    frame:
+      "Small vertical oval, CSS object-fit: cover, object-position 62% 42%, so the frame is mostly brick rather than sky or the whole building. Duotone is CSS.",
   },
   exteriorStreetView: {
     file: "exterior-street-view",
@@ -83,7 +85,7 @@ export const photos = {
     width: 2000,
     height: 1500,
     aspect: "4:3",
-    appears: ["Visit", "Gallery"],
+    appears: ["Kept for a later swap. Not shown."],
     frame: "Shown at 4:3, not cropped.",
   },
   interiorLobbyWide: {
@@ -92,7 +94,7 @@ export const photos = {
     width: 2000,
     height: 1125,
     aspect: "16:9",
-    appears: ["Our space", "Gallery"],
+    appears: ["Kept for a later swap. Not shown."],
     frame: "Shown at 16:9, not cropped.",
   },
   interiorCounterBrickBeams: {
@@ -101,7 +103,7 @@ export const photos = {
     width: 2000,
     height: 1500,
     aspect: "4:3",
-    appears: ["Our space (primary photograph)", "Gallery"],
+    appears: ["Kept for a later swap. Not shown."],
     frame: "Shown at 4:3, not cropped.",
   },
   interiorCounterLobby: {
@@ -110,7 +112,7 @@ export const photos = {
     width: 2000,
     height: 1500,
     aspect: "4:3",
-    appears: ["Gallery"],
+    appears: ["Kept for a later swap. Not shown."],
     frame: "Shown at 4:3, not cropped.",
   },
   ceilingWoodBeams: {
@@ -119,8 +121,9 @@ export const photos = {
     width: 1500,
     height: 2000,
     aspect: "3:4",
-    appears: ["Our space", "Gallery"],
-    frame: "Shown at 3:4, not cropped.",
+    appears: ["Our space, oval glimpse of a wood beam"],
+    frame:
+      "Small vertical oval, CSS object-fit: cover, object-position center 28%, tight on the beams and ductwork. Duotone is CSS.",
   },
   pharmacyGlassEnclosure: {
     file: "pharmacy-glass-enclosure",
@@ -128,7 +131,7 @@ export const photos = {
     width: 2000,
     height: 1500,
     aspect: "4:3",
-    appears: ["Services", "Gallery"],
+    appears: ["Kept for a later swap. Not shown."],
     frame: "Shown at 4:3, not cropped.",
   },
   pharmacyInteriorShelves: {
@@ -137,7 +140,7 @@ export const photos = {
     width: 2000,
     height: 1500,
     aspect: "4:3",
-    appears: ["Services", "Gallery"],
+    appears: ["Kept for a later swap. Not shown."],
     frame: "Shown at 4:3, not cropped.",
   },
   otcShelvesBrickWall: {
@@ -146,7 +149,7 @@ export const photos = {
     width: 2000,
     height: 1500,
     aspect: "4:3",
-    appears: ["Services", "Gallery"],
+    appears: ["Kept for a later swap. Not shown."],
     frame: "Shown at 4:3, not cropped.",
   },
   waitingAreaWide: {
@@ -155,7 +158,7 @@ export const photos = {
     width: 2000,
     height: 1125,
     aspect: "16:9",
-    appears: ["Our space", "Gallery"],
+    appears: ["Kept for a later swap. Not shown."],
     frame: "Shown at 16:9, not cropped.",
   },
   waitingAreaWindows: {
@@ -164,7 +167,7 @@ export const photos = {
     width: 1125,
     height: 2000,
     aspect: "9:16",
-    appears: ["Gallery"],
+    appears: ["Kept for a later swap. Not shown."],
     frame: "Shown at 9:16, not cropped.",
   },
   waitingAreaTable: {
@@ -173,7 +176,7 @@ export const photos = {
     width: 1125,
     height: 2000,
     aspect: "9:16",
-    appears: ["Gallery"],
+    appears: ["Kept for a later swap. Not shown."],
     frame: "Shown at 9:16, not cropped.",
   },
 } as const satisfies Record<string, PhotoSlot>;

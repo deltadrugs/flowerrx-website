@@ -18,14 +18,6 @@ if (slots.length !== 15) {
   process.exit(1);
 }
 
-const heroMin = Number(source.match(/HERO_DESKTOP_MIN_PX = (\d+)/)?.[1]);
-const css = fs.readFileSync(path.join(root, "app", "globals.css"), "utf8");
-const layout = fs.readFileSync(path.join(root, "app", "layout.tsx"), "utf8");
-if (!css.includes(`min-width: ${heroMin}px`) || !layout.includes(`max-width: ${heroMin - 1}px`)) {
-  console.error(`Hero breakpoint ${heroMin}px is out of sync between lib/photos.ts, globals.css, and layout.tsx.`);
-  process.exit(1);
-}
-
 let failed = false;
 
 for (const slot of slots) {

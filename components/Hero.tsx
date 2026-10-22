@@ -1,34 +1,15 @@
+import { Flourish } from "@/components/engravings";
+import { InkPlate } from "@/components/InkPlate";
 import { Logo } from "@/components/Logo";
-import { Rule } from "@/components/Rule";
-import { HERO_DESKTOP_MEDIA, photoUrl, photos } from "@/lib/photos";
 import { addressLine, mapsDirectionsHref, site } from "@/lib/site";
-
-const desktop = photos.heroStorefrontWide;
-const mobile = photos.entranceFrontDoors;
 
 export function Hero() {
   return (
     <section className="hero" id="top" aria-labelledby="hero-heading">
-      <div className="hero-media">
-        <picture>
-          <source media={HERO_DESKTOP_MEDIA} srcSet={photoUrl(desktop, "webp")} type="image/webp" />
-          <source media={HERO_DESKTOP_MEDIA} srcSet={photoUrl(desktop, "jpg")} />
-          <source srcSet={photoUrl(mobile, "webp")} type="image/webp" />
-          {/* eslint-disable-next-line @next/next/no-img-element */}
-          <img
-            src={photoUrl(mobile, "jpg")}
-            alt="Flower Rx Pharmacy storefront: red brick, steel-frame glass doors, and the carved Flower Rx Pharmacy sign."
-            width={mobile.width}
-            height={mobile.height}
-            fetchPriority="high"
-            decoding="async"
-          />
-        </picture>
-        <div className="hero-shade" aria-hidden="true" />
-      </div>
-      <div className="hero-card">
-        <Logo className="hero-logo" alt="Flower Rx Pharmacy" width={220} height={89} />
-        <Rule className="rule-tight" />
+      <div className="wrap hero-mast">
+        <p className="eyebrow">Glendale, California</p>
+        <Logo className="hero-logo" alt="Flower Rx Pharmacy" width={360} height={146} />
+        <Flourish />
         <h1 id="hero-heading">{site.tagline}</h1>
         <p className="lede">
           An independent pharmacy for prescriptions, vaccines, compounding, and free local delivery.
@@ -46,6 +27,7 @@ export function Hero() {
           <a href="./#visit">{addressLine()}</a>
         </p>
       </div>
+      <InkPlate />
     </section>
   );
 }

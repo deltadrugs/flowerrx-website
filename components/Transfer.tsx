@@ -1,3 +1,4 @@
+import { BottlesDrawing } from "@/components/engravings";
 import { addressLine, mapsDirectionsHref, site } from "@/lib/site";
 
 export function Transfer() {
@@ -19,6 +20,7 @@ export function Transfer() {
           </p>
         </div>
         <div className="transfer-actions">
+          <BottlesDrawing />
           <a className="btn btn-light" href={site.phoneHref}>
             Call {site.phoneDisplay}
           </a>

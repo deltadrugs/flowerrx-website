@@ -1,11 +1,10 @@
-import { Frame } from "@/components/Photo";
+import { Flourish } from "@/components/engravings";
 import { Hours } from "@/components/Hours";
-import { photos } from "@/lib/photos";
 import { addressLine, mailtoHref, mapsDirectionsHref, mapsEmbedHref, mapsSearchHref, site } from "@/lib/site";
 
 export function Visit() {
   return (
-    <section className="section section-cream" id="visit" aria-labelledby="visit-heading">
+    <section className="section" id="visit" aria-labelledby="visit-heading">
       <div className="wrap visit-grid">
         <section id="hours" aria-labelledby="hours-heading">
           <Hours />
@@ -13,13 +12,14 @@ export function Visit() {
         <div className="visit-copy">
           <p className="eyebrow">Visit</p>
           <h2 id="visit-heading">Come see us</h2>
+          <Flourish className="flourish-left" />
           <address className="visit-address">
             <a href={mapsSearchHref()} target="_blank" rel="noopener noreferrer">
               {addressLine()}
               <span className="sr-only"> (opens in a new tab)</span>
             </a>
           </address>
-          <ul className="contact-list contact-list-ink">
+          <ul className="contact-list">
             <li>
               <span>Tel</span>
               <a href={site.phoneHref}>{site.phoneDisplay}</a>
@@ -51,8 +51,6 @@ export function Visit() {
             />
           </div>
         </div>
-        <Frame className="visit-photo" photo={photos.exteriorStreetView} />
-        <Frame className="visit-photo" photo={photos.heroStorefrontSign} />
       </div>
     </section>
   );
